@@ -1,0 +1,26 @@
+{% extends "workout/base.html" %}
+{% block logoutwidget %}
+<button type="button" id="loginbutton">Log in</button>
+{% endblock %}
+{% block content %}
+<h1>Register new user</h1>
+<form id="workoutform" action="/workoutcal/register/" method="post">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    {% for field in form.visible_fields %}
+        <div class="row">
+            <div class="col-xs-2">
+                {{ field.label_tag }}
+            </div>
+            <div class="col-xs-2">
+                {{ field }}
+            </div>
+            <div class="col-xs-3">
+                {{ field.errors }}
+            </div>
+        </div>
+
+    {% endfor %}
+    <input type="submit" value="Register">
+</form>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% csrf_token %}
+<span class="error">
+    {{ custom_error_message }}
+    {{ form.non_field_errors }}
+</span>
+{% for field in form.visible_fields %}
+    <div class="row">
+        <div class="col-xs-2">
+            {{ field.label_tag }}
+        </div>
+        <div class="col-xs-2">
+            {{ field }}
+        </div>
+        <div class="col-xs-3">
+            {{ field.errors }}
+        </div>
+    </div>
+
+{% endfor %}

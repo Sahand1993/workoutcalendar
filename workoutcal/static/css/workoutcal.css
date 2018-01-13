@@ -1,0 +1,58 @@
+.inputs{
+    margin-top: 20px;
+}
+.pars{
+    margin-top: 20px;
+}
+
+/* ajax database lookup dropdowns */
+.dropdowntextbox{
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #E0E0E0;
+    width: 129;
+    white-space: nowrap;
+    margin-left: 1px;
+}
+.dropdown-content a{
+    display: block;
+    z-index: 1;
+}
+.show{
+    display:block;
+    z-index: 1;
+}
+
+/* Errors on login form */
+.error{
+    color:red;
+}
+
+
+/* calendar buttons */
+.calendar-backforward-buttons #backbutton{
+    float:left;
+}
+.calendar-backforward-buttons #forwardbutton{
+    float:right;
+}
+
+/* Calendar table */
+
+.calendar-table td{
+    height:70px;
+    width:70px;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+}
+
+.calendar-backforward-buttons button{
+    width: 120px;
+}

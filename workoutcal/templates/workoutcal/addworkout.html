@@ -1,0 +1,77 @@
+{% extends "workout/base.html" %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block hidden %}
+{% include "workoutcal/liftrow.html" %} {# To be used by Javascript #}
+{% include "workoutcal/cardiorow.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-10">
+            <h1>{{ title }}</h1>
+        </div>
+        {% block back_to_cal_row %}
+        <div class="col-xs-2">
+            <button type="button" id="calendarbutton">Back to calendar</button>
+        </div>
+        {% endblock %}
+    </div>
+
+    {% block form_head %}
+    <form id="workoutform" action="{% url 'workoutcal:add_workout' date.year date.month date.day %}" method="post">
+    {% endblock %}
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-xs-2">
+                <p id="date">{% block shown_date %}{{ date.year }}-{{ date.month }}-{{ date.day }}{% endblock %}</p>
+                <input type="hidden" name="datetime" value="{% block hidden_date %}{{ datetime }}{% endblock %}">
+            </div>
+        </div>
+
+        <h2 class="col-xs-12">Lifts</h2>
+        {% block lifts %}
+        <div id="liftrows">
+            {% for i in range %}
+              {% include "workoutcal/liftrow.html" %}
+            {% endfor %}
+        </div>
+        {% endblock %}
+        {% block addliftrow %}
+        <div class="row">
+            <div class="col-xs-0"></div>
+            <label class="col-xs-2"><button type="button" id="addliftbutton">One more lift</button></label>
+        </div>
+        {% endblock %}
+
+
+
+        <h2 class="col-xs-12">Cardio</h2>
+        {% block cardios %}
+        <div id="cardiorows">
+            {% include "workoutcal/cardiorow.html" %}
+        </div>
+        {% endblock %}
+        {% block addcardiorow %}
+        <div class="row">
+            <label class="col-xs-2"><button type="button" id="addcardiobutton">One more cardio</button></label>
+        </div>
+        {% endblock %}
+        <div class="row">
+            <div class="col-xs-10"></div>
+            <label class="col-xs-2">{% block submit_button %}<input type="submit" id="submitbutton" value="Save Workout">{% endblock %}</label>
+        </div>
+
+    </form>
+</div>
+
+<p id="json"></p>
+{% endblock %}
+
+{% block footer %}
+<script type="text/javascript" src="{% static "js/addWorkout.js" %}"></script>
+{% endblock %}

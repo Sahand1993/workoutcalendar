@@ -1,0 +1,40 @@
+{% extends "workout/base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+<form action="/workoutcal/add_lift/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
+{% block script %}
+function createHXR(){
+    if (typeof XMLHttpRequest !== "undefined"){
+        return new XMLHttpRequest;
+    } else if (typeof createXHR.activeXString != "string"){
+        var versions = ["MSXML2.XMLHttp.6.0","MSXML2.XMLHttp.3.0","MSXML2.XMLHttp"],
+        i, len;
+
+        for(i=0, len=versions.length; i < len; i++){
+            try {
+                createXHR.activeXString = versions[i];
+                return new ActiveXObject(versions[i]);
+            } catch(ex){
+                createXHR.activeXString=undefined;
+            }
+        }
+
+        throw new Error("No XHR available");
+    } else {
+        return new ActiveXObject(createXHR.activeXString);
+    }
+}
+
+function addURLParam(url, name, value){
+    url += (url.indexOf("?") == -1 ? "?" : "&");
+    url += encodeURIComponent(name) + "=" + encodeURIComponent(value);
+    return url;
+}
+
+{% endblock %}

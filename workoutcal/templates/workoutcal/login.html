@@ -1,0 +1,10 @@
+{% extends "workout/base.html" %}
+
+{% block logoutwidget %}{% endblock %}
+
+{% block content %}
+    <form action="/workoutcal/login/" method="post">
+        {% include "workoutcal/form_with_errors.html" %}
+        <input type="submit" value="Log in">
+    </form>
+{% endblock %}
