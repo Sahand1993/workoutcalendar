@@ -10,7 +10,7 @@ from workoutcal import fields
 
 class User(AbstractUser):
 
-	REQUIRED_FIELDS = []
+	REQUIRED_FIELDS = ['email']
 	USERNAME_FIELD = 'email'
 	email = models.EmailField(
 		_('email address'),
