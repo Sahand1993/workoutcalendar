@@ -9,20 +9,6 @@ from django.utils import timezone
 
 from workoutcal import fields
 
-class User(AbstractUser):
-
-	REQUIRED_FIELDS = []
-	USERNAME_FIELD = 'email'
-	email = models.EmailField(
-		_('email address'),
-		max_length=150,
-		unique=True,
-		help_text=_('Required. 150 characters or fewer. Must be a valid email address.'),
-		error_messages={
-			'unique':_("A user with that email address already exists."),
-		},
-	)
-
 class CustomUserManager(BaseUserManager):
 	def _create_user(self, email, password, is_staff, is_superuser, **extra_fields):
 		now = timezone.now()
@@ -41,6 +27,21 @@ class CustomUserManager(BaseUserManager):
 
 	def create_superuser(self, email, password, **extra_fields):
 		return self._create_user(email, password, True, True, **extra_fields)
+
+class User(AbstractUser):
+
+	REQUIRED_FIELDS = []
+	USERNAME_FIELD = 'email'
+	email = models.EmailField(
+		_('email address'),
+		max_length=150,
+		unique=True,
+		help_text=_('Required. 150 characters or fewer. Must be a valid email address.'),
+		error_messages={
+			'unique':_("A user with that email address already exists."),
+		},
+	)
+	objects = CustomUserManager()
 
 class Workout(models.Model):
 
