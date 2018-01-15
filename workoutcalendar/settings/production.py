@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'HiAgain!a3pfaUHUUHU..isdHAH!FRUIT!fasdfAWERASDIFAISDFW%)€#"=&)#€%=&*Â^FADSF#"€%ADF*^€%')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', False))
 
-ALLOWED_HOSTS = ['testserver', 'localhost', '0.0.0.0']
+ALLOWED_HOSTS = ['localhost', '0.0.0.0', 'workoutcalendar.herokuapp.com']
 
 
 # Application definition

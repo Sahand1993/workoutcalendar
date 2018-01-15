@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "workout.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "workoutcalendar.settings")
 
 application = get_wsgi_application()
