@@ -1,1 +1,1 @@
-web: gunicorn workoutcalendar.wsgi --log-file -
+web: gunicorn shworkout.wsgi --log-file -
