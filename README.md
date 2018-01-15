@@ -2,4 +2,4 @@
 
 This is a web app that lets you log your workouts in a calendar. Domain name will soon be announced.
 
-Uses the Django framework, version 1.11. 
+Uses the Django framework, version 2. 
