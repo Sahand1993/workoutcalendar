@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25b6b541-fc73-4ca9-8d54-f87f20ed82b5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workout/settings/production.py" afterPath="$PROJECT_DIR$/workout/settings/production.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -88,8 +89,8 @@
       <file leaf-file-name="production.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/workout/settings/production.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+            <state relative-caret-position="328">
+              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -283,6 +284,19 @@
             <path>
               <item name="workout" type="b2602c69:ProjectViewProjectNode" />
               <item name="workout" type="462c0819:PsiDirectoryNode" />
+              <item name="workoutcal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="workout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="workout" type="462c0819:PsiDirectoryNode" />
+              <item name="workoutcal" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="workout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="workout" type="462c0819:PsiDirectoryNode" />
+              <item name="workoutcal" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="workoutcal" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -707,8 +721,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/workout/settings/production.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        <state relative-caret-position="328">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
           <folding />
         </state>
       </provider>
