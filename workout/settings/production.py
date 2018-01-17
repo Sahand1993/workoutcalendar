@@ -15,15 +15,15 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-workout_templates = os.path.join(BASE_DIR, *['workout', 'templates','workout'])
-workoutcal_templates = os.path.join(BASE_DIR, *['workoutcal', 'templates','workoutcal'])
+workout_templates = os.path.join(BASE_DIR, *['workout', 'templates'])
+workoutcal_templates = os.path.join(BASE_DIR, *['workoutcal', 'templates'])
 print("\n\n\n\n\n\nHERE'S THE WORKOUT TEMPLATES PATH: "+str(workout_templates))
 print("\n\n\nHERE'S THE WORKOUTCAL TEMPLATES PATH: "+str(workoutcal_templates))
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, "templates")],
+        'DIRS': [workout_templates, workoutcal_templates],
     }
 
 ]
